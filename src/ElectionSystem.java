@@ -12,7 +12,8 @@ public class ElectionSystem {
                 "Chris Garcia", "Ethan Williams", "Rigo Berto", "Benito Cruz"
         };
 
-        int numCandidates = 3 + rand.nextInt(5); // 3 to 7
+
+        int numCandidates = 3 + rand.nextInt(allCandidates.length - 2); // 3 to len of allCandidates array
         LinkedList<String> selectedCandidates = new LinkedList<>();
         boolean[] used = new boolean[allCandidates.length];
 
@@ -43,7 +44,9 @@ public class ElectionSystem {
             System.out.println(name);
         }
 
-        String riggedWinner = selectedCandidates.get(0);
+        int randomRigged = rand.nextInt(selectedCandidates.size());
+
+        String riggedWinner = selectedCandidates.get(randomRigged);
         System.out.println("\nRigging election for: " + riggedWinner);
         election.rigElection(riggedWinner);
 
