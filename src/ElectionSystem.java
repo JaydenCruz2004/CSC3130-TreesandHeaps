@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 public class ElectionSystem {
     public static void main(String[] args) {
         Election election = new Election();

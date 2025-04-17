@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 public class Election {
     private Map<String, Integer> candidatesMap = new HashMap<>();
     private int totalVotes;
